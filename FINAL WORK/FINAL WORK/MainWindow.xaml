@@ -1,0 +1,71 @@
+﻿<Window x:Class="FINAL_WORK.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FINAL_WORK"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="480" KeyDown="Window_KeyDown" Closed="Window_Closed">
+    <Grid>
+        <!--格子-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="330"></RowDefinition>
+
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="drawbar" Background="White" Grid.Row="0">
+            <StackPanel Height="50">
+                <TextBox Height="50" Margin="120 10 120 10" FontSize="30" FontWeight="Bold">繪畫張數計算機</TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="60">
+                <TextBox Margin="10 10 0 10" FontSize="25" FontWeight="Bold"  BorderBrush="White">臨摹</TextBox>
+                <Slider Margin="10,13,10,13" Minimum="0" Maximum="30" x:Name="draw1" ValueChanged="draw1_ValueChanged" Width="277"></Slider>
+                <TextBox FontSize="25" FontWeight="Bold" x:Name="draw1count" Width="48" Margin="0,10"  BorderBrush="White">xxx</TextBox>
+                <Button Margin="5 10 5 10" Width="50"  BorderBrush="White" Click="Button_Click" x:Name="BTN1">上傳</Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="60">
+                <TextBox Margin="10 10 0 10" FontSize="25" FontWeight="Bold"  BorderBrush="White">骨架</TextBox>
+                <Slider Margin="10,13,10,13" Minimum="0" Maximum="30" x:Name="draw2" ValueChanged="draw1_ValueChanged" Width="277"  BorderBrush="White"></Slider>
+                <TextBox FontSize="25" FontWeight="Bold" x:Name="draw2count" Width="48" Margin="0,10" BorderBrush="White">xxx</TextBox>
+                <Button Margin="5 10 5 10" Width="50" BorderBrush="White">上傳</Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="60">
+                <TextBox Margin="10 10 0 10" FontSize="25" FontWeight="Bold" BorderBrush="White">直線</TextBox>
+                <Slider Margin="10,13,10,13" Minimum="0" Maximum="30" x:Name="draw3" ValueChanged="draw1_ValueChanged" Width="277"></Slider>
+                <TextBox FontSize="25" FontWeight="Bold" x:Name="draw3count" Width="48" Margin="0,10" BorderBrush="White">xxx</TextBox>
+                <Button Margin="5 10 5 10" Width="50"  BorderBrush="White">上傳</Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="60">
+                <TextBox Margin="10 10 0 10" FontSize="25" FontWeight="Bold"  BorderBrush="White">光影</TextBox>
+                <Slider Margin="10,13,10,13" Minimum="0" Maximum="30" x:Name="draw4" ValueChanged="draw1_ValueChanged" Width="277"  BorderBrush="White"></Slider>
+                <TextBox FontSize="25" FontWeight="Bold" x:Name="draw4count" Width="48" Margin="0,0,0,0" Height="37"  BorderBrush="White" >xxx</TextBox>
+                <Button Margin="5 10 5 10 "  BorderBrush="White" Width="50" Content="上傳"/>
+            </StackPanel>
+
+
+        </StackPanel>
+        <StackPanel x:Name="drawlist" Background="Gray" Grid.Row="1">
+            <StackPanel Height="50">
+                <TextBox Height="50" Margin="75 10 75 10" FontSize="30" FontWeight="Bold" Background="DimGray" BorderBrush="DimGray">進度條(建議每日各一張</TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Margin="30 10 10 10" FontSize="25" FontWeight="Bold"  BorderBrush="Gray" Text="臨摹"/>
+                <ProgressBar Height="36" Value="0" Maximum="60" x:Name="MyProgress" Width="302"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Margin="30 10 10 10" FontSize="25" FontWeight="Bold"  BorderBrush="Gray">骨架</TextBox>
+                <ProgressBar Height="36" Value="0" Maximum="60" x:Name="MyProgress1" Width="302"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Margin="30 10 10 10" FontSize="25" FontWeight="Bold"  BorderBrush="Gray">直線</TextBox>
+                <ProgressBar Height="36" Value="0" Maximum="60" x:Name="MyProgress2" Width="302"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Margin="30 10 10 10" FontSize="25" FontWeight="Bold"  BorderBrush="Gray">光影</TextBox>
+                <ProgressBar Height="36" Value="0" Maximum="60" x:Name="MyProgress3" Width="302"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>
