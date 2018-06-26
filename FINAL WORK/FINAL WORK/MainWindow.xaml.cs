@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
+using System.IO;
+using System.Collections;
 
 namespace FINAL_WORK
 {
@@ -26,6 +28,7 @@ namespace FINAL_WORK
         {
             InitializeComponent();
         }
+        
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
@@ -44,8 +47,83 @@ namespace FINAL_WORK
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            DirectoryInfo di = new DirectoryInfo(@"C:\Users\james\Documents\finalproject2018-5\臨摹");
+            int countdraw = 0;
+
+            foreach (var fi in di.GetFiles())
+            {
+                countdraw = int.Parse(di.GetFiles("*.jpg").Length.ToString());
+                draw1count.Text = "已畫了" + (countdraw.ToString()) + "張圖，還差" + (60 - countdraw) + "張圖";
+
+            }
+            if (MyProgress.Value < countdraw)
+                MyProgress.Value += countdraw;
+            else ;
+
+        }
+
+        private void MyProgress_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
             
-            MyProgress.Value += 5;
+            
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            DirectoryInfo di = new DirectoryInfo(@"C:\Users\james\Documents\finalproject2018-5\骨架");
+            int countdraw = 0;
+
+            foreach (var fi in di.GetFiles())
+            {
+                countdraw = int.Parse(di.GetFiles("*.jpg").Length.ToString());
+                draw2count.Text = "已畫了"+ (countdraw.ToString()) +"張圖，還差"+(60-countdraw)+"張圖" ;
+
+            }
+            if (MyProgress1.Value < countdraw)
+                MyProgress1.Value += countdraw;
+            else;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            DirectoryInfo di = new DirectoryInfo(@"C:\Users\james\Documents\finalproject2018-5\直線");
+            int countdraw = 0;
+
+            foreach (var fi in di.GetFiles())
+            {
+                countdraw = int.Parse(di.GetFiles("*.jpg").Length.ToString());
+                draw3count.Text = "已畫了" + (countdraw.ToString()) + "張圖，還差" + (60 - countdraw) + "張圖";
+
+            }
+            if (MyProgress2.Value < countdraw)
+                MyProgress2.Value += countdraw;
+            else;
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            DirectoryInfo di = new DirectoryInfo(@"C:\Users\james\Documents\finalproject2018-5\光影");
+            int countdraw3 = 0;
+
+            foreach (var fi in di.GetFiles())
+            {
+                countdraw3 = int.Parse(di.GetFiles("*.jpg").Length.ToString());
+                draw4count.Text = "已畫了" + (countdraw3.ToString()) + "張圖，還差" + (60 - countdraw3) + "張圖";
+
+            }
+            if (MyProgress3.Value < countdraw3)
+                MyProgress3.Value += countdraw3;
+            else;
         }
     }
 }

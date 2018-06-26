@@ -13,3 +13,18 @@ C:\Users\james\Desktop\FINAL WORK\FINAL WORK\obj\Debug\FINAL WORK.csproj.Generat
 C:\Users\james\Desktop\FINAL WORK\FINAL WORK\obj\Debug\FINAL WORK.csproj.CoreCompileInputs.cache
 C:\Users\james\Desktop\FINAL WORK\FINAL WORK\obj\Debug\FINAL WORK.exe
 C:\Users\james\Desktop\FINAL WORK\FINAL WORK\obj\Debug\FINAL WORK.pdb
+C:\Users\james\Documents\finalproject2018-5\FINAL WORK\FINAL WORK\bin\Debug\FINAL WORK.exe.config
+C:\Users\james\Documents\finalproject2018-5\FINAL WORK\FINAL WORK\bin\Debug\FINAL WORK.exe
+C:\Users\james\Documents\finalproject2018-5\FINAL WORK\FINAL WORK\bin\Debug\FINAL WORK.pdb
+C:\Users\james\Documents\finalproject2018-5\FINAL WORK\FINAL WORK\obj\Debug\FINAL WORK.csprojAssemblyReference.cache
+C:\Users\james\Documents\finalproject2018-5\FINAL WORK\FINAL WORK\obj\Debug\MainWindow.g.cs
+C:\Users\james\Documents\finalproject2018-5\FINAL WORK\FINAL WORK\obj\Debug\App.g.cs
+C:\Users\james\Documents\finalproject2018-5\FINAL WORK\FINAL WORK\obj\Debug\FINAL WORK_MarkupCompile.cache
+C:\Users\james\Documents\finalproject2018-5\FINAL WORK\FINAL WORK\obj\Debug\FINAL WORK_MarkupCompile.lref
+C:\Users\james\Documents\finalproject2018-5\FINAL WORK\FINAL WORK\obj\Debug\MainWindow.baml
+C:\Users\james\Documents\finalproject2018-5\FINAL WORK\FINAL WORK\obj\Debug\FINAL WORK.g.resources
+C:\Users\james\Documents\finalproject2018-5\FINAL WORK\FINAL WORK\obj\Debug\FINAL_WORK.Properties.Resources.resources
+C:\Users\james\Documents\finalproject2018-5\FINAL WORK\FINAL WORK\obj\Debug\FINAL WORK.csproj.GenerateResource.cache
+C:\Users\james\Documents\finalproject2018-5\FINAL WORK\FINAL WORK\obj\Debug\FINAL WORK.csproj.CoreCompileInputs.cache
+C:\Users\james\Documents\finalproject2018-5\FINAL WORK\FINAL WORK\obj\Debug\FINAL WORK.exe
+C:\Users\james\Documents\finalproject2018-5\FINAL WORK\FINAL WORK\obj\Debug\FINAL WORK.pdb
