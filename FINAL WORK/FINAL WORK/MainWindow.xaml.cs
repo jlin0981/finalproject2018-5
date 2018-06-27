@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Collections;
+using Winforms = System.Windows.Forms;
+using System.Diagnostics;
 
 namespace FINAL_WORK
 {
@@ -24,6 +26,7 @@ namespace FINAL_WORK
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -47,20 +50,36 @@ namespace FINAL_WORK
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DirectoryInfo di = new DirectoryInfo(@"C:\Users\james\Documents\finalproject2018-5\臨摹");
-            int countdraw = 0;
+            Winforms.FolderBrowserDialog folderDialog = new Winforms.FolderBrowserDialog();
+            folderDialog.ShowNewFolderButton = false;
+            folderDialog.SelectedPath = System.AppDomain.CurrentDomain.BaseDirectory;
+            Winforms.DialogResult result = folderDialog.ShowDialog();
+          
+            DirectoryInfo di = new DirectoryInfo(folderDialog.SelectedPath);
+                int countdraw = 0;
 
-            foreach (var fi in di.GetFiles())
-            {
-                countdraw = int.Parse(di.GetFiles("*.jpg").Length.ToString());
-                draw1count.Text = "已畫了" + (countdraw.ToString()) + "張圖，還差" + (60 - countdraw) + "張圖";
-
+                foreach (var fi in di.GetFiles())
+                {
+                    countdraw = int.Parse(di.GetFiles("*.jpg").Length.ToString());
+                    draw1count.Text = "已畫了" + (countdraw.ToString()) + "張圖，還差" + (60 - countdraw) + "張圖";
+                if (MyProgress.Value < countdraw && countdraw <= 60)
+                {
+                    MyProgress.Value = countdraw;
+                }
+                else if (countdraw > 60)
+                {
+                    
+                    MyProgress.Value = countdraw;
+                    draw1count.Text = "完成";
+                }
+                MyProgress.Value = countdraw ;
             }
-            if (MyProgress.Value < countdraw)
-                MyProgress.Value += countdraw;
-            else ;
 
         }
+            
+           
+
+        
 
         private void MyProgress_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
@@ -70,60 +89,105 @@ namespace FINAL_WORK
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            DirectoryInfo di = new DirectoryInfo(@"C:\Users\james\Documents\finalproject2018-5\骨架");
+            Winforms.FolderBrowserDialog folderDialog = new Winforms.FolderBrowserDialog();
+            folderDialog.ShowNewFolderButton = false;
+            folderDialog.SelectedPath = System.AppDomain.CurrentDomain.BaseDirectory;
+            Winforms.DialogResult result = folderDialog.ShowDialog();
+
+            DirectoryInfo di = new DirectoryInfo(folderDialog.SelectedPath);
             int countdraw = 0;
 
             foreach (var fi in di.GetFiles())
             {
                 countdraw = int.Parse(di.GetFiles("*.jpg").Length.ToString());
-                draw2count.Text = "已畫了"+ (countdraw.ToString()) +"張圖，還差"+(60-countdraw)+"張圖" ;
+                draw2count.Text = "已畫了" + (countdraw.ToString()) + "張圖，還差" + (60 - countdraw) + "張圖";
+                if (MyProgress1.Value < countdraw && countdraw <= 60)
+                {
+                    MyProgress1.Value = countdraw;
+                }
+                else if (countdraw > 60)
+                {
 
+                    MyProgress1.Value = countdraw;
+                    draw2count.Text = "完成";
+                }
+                MyProgress1.Value = countdraw;
             }
-            if (MyProgress1.Value < countdraw)
-                MyProgress1.Value += countdraw;
-            else;
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            DirectoryInfo di = new DirectoryInfo(@"C:\Users\james\Documents\finalproject2018-5\直線");
+            Winforms.FolderBrowserDialog folderDialog = new Winforms.FolderBrowserDialog();
+            folderDialog.ShowNewFolderButton = false;
+            folderDialog.SelectedPath = System.AppDomain.CurrentDomain.BaseDirectory;
+            Winforms.DialogResult result = folderDialog.ShowDialog();
+
+            DirectoryInfo di = new DirectoryInfo(folderDialog.SelectedPath);
+            int countdraw = 0;
+            foreach (var fi in di.GetFiles())
+            {
+                countdraw = int.Parse(di.GetFiles("*.jpg").Length.ToString());
+                draw3count.Text = "已畫了" + (countdraw.ToString()) + "張圖，還差" + (60 - countdraw) + "張圖";
+                if (MyProgress2.Value < countdraw && countdraw <= 60)
+                {
+                    MyProgress2.Value = countdraw;
+                }
+                else if (countdraw > 60)
+                {
+
+                    MyProgress2.Value = countdraw;
+                    draw3count.Text = "完成";
+                }
+                MyProgress2.Value = countdraw;
+            }
+
+
+
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            Winforms.FolderBrowserDialog folderDialog = new Winforms.FolderBrowserDialog();
+            folderDialog.ShowNewFolderButton = false;
+            folderDialog.SelectedPath = System.AppDomain.CurrentDomain.BaseDirectory;
+            Winforms.DialogResult result = folderDialog.ShowDialog();
+          
+            DirectoryInfo di = new DirectoryInfo(folderDialog.SelectedPath);
             int countdraw = 0;
 
             foreach (var fi in di.GetFiles())
             {
                 countdraw = int.Parse(di.GetFiles("*.jpg").Length.ToString());
-                draw3count.Text = "已畫了" + (countdraw.ToString()) + "張圖，還差" + (60 - countdraw) + "張圖";
+                draw4count.Text = "已畫了" + (countdraw.ToString()) + "張圖，還差" + (60 - countdraw) + "張圖";
+                if (MyProgress3.Value < countdraw && countdraw <= 60)
+                {
+                    MyProgress3.Value = countdraw;
+                }
+                else if (countdraw > 60)
+                {
 
+                    MyProgress3.Value = countdraw;
+                    draw4count.Text = "完成";
+                }
+                MyProgress3.Value = countdraw;
             }
-            if (MyProgress2.Value < countdraw)
-                MyProgress2.Value += countdraw;
-            else;
         }
 
-        private void Button_Click_5(object sender, RoutedEventArgs e)
+        private void Button_Click_6(object sender, RoutedEventArgs e)
         {
-            DirectoryInfo di = new DirectoryInfo(@"C:\Users\james\Documents\finalproject2018-5\光影");
-            int countdraw3 = 0;
+            
 
-            foreach (var fi in di.GetFiles())
-            {
-                countdraw3 = int.Parse(di.GetFiles("*.jpg").Length.ToString());
-                draw4count.Text = "已畫了" + (countdraw3.ToString()) + "張圖，還差" + (60 - countdraw3) + "張圖";
+        }
 
-            }
-            if (MyProgress3.Value < countdraw3)
-                MyProgress3.Value += countdraw3;
-            else;
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            
+
+        }
+
+        private void draw1count_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
